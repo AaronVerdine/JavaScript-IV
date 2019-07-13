@@ -58,12 +58,12 @@ class Person {
       this.favInstructor = pmProps.favInstructor;
     }
     
-    standUp() {
-      console.log(`${name} announces to ${channel}, @channel standy times!`);
+    standUp(channel) {
+      console.log(`${this.name} announces to ${channel}, @channel standy times!`);
     }
 
-    debugsCode(student, subject) {
-      console.log(`${student} debugs ${student.name}'s code on ${subject}'`)
+    debugsCode(name, student, subject) {
+      console.log(`${name} debugs ${student}'s code on ${subject}'`);
     }
   }
 
@@ -151,3 +151,33 @@ const Cheryl = new Student({
 
 
 // *** PM OBJECTS ***
+
+const Derrick = new ProjectManagers({
+    name: 'Derrick',
+    age: 25,
+    location: 'Chicago, Illinois',
+    specialty: 'Javascript Class Constructors',
+    favLanguage: 'React.js' ,
+    gradClassName: 'WEBPT8',
+    favInstructor: 'Melissa'
+})
+
+// console.log(Derrick);
+// Derrick.speak();
+// Derrick.standUp('WEBPT8_Derrick');
+// Derrick.debugsCode('Derrick',' Manny', 'Javascript fundamentals IV');
+
+const Danielle = new ProjectManagers({
+    name: 'Danielle',
+    age: 35,
+    location: 'Tempe, Arizona',
+    specialty: 'Gitflow',
+    favLanguage: 'CSS' ,
+    gradClassName: 'WEB 21',
+    favInstructor: 'Daenerys'
+})
+
+console.log(Danielle);
+Danielle.speak();
+Danielle.standUp('WEB21_Danielle');
+Derrick.debugsCode('Danielle',' Cheryl', 'User Interface III');
