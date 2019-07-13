@@ -37,15 +37,17 @@ class Person {
     }
 
     listsSubjects() {
-      console.log(list.favsubjects);
+         this.favSubjects.map(student  => {
+            console.log(`${this.favSubjects}`);
+         })
     }
 
     PRAssignment(subject) {
-      console.log(`${student.name} has submitted a PR for ${subject}`);
+      console.log(`${this.name} has submitted a PR for ${subject}.`);
     }
 
-    sprintChallenge() {
-      console.log(`${student.name} has begun sprint challenge on ${subject}.`)
+    sprintChallenge(subject) {
+      console.log(`${this.name} has begun sprint challenge on ${subject}.`);
     }
   }
 
@@ -116,14 +118,36 @@ const Daenerys = new Instructor ({
 
 // *** STUDENT OBJECTS ***
 
-// const Manny = new Student({
-// name: 'Manny',
-// age: 21,
-// location: 'Miami, Florida',
-// previousBackground: "Automotive Technician",
-// className: 'WEBPT8',
-// favSubjects: 'User Interface'
-// })
+const Manny = new Student({
+name: 'Manny',
+age: 21,
+location: 'Miami, Florida',
+previousBackground: "Automotive Technician",
+className: 'WEBPT8',
+favSubjects: ['User Interface', ' LESS ', ' Javascript']
+})
+
+// console.log(Manny);
+// Manny.speak();
+// Manny.listsSubjects();
+// Manny.PRAssignment('Javascript');
+// Manny.sprintChallenge('Javascipt fundamentals IV');
+
+
+const Cheryl = new Student({
+    name: 'Cheryl',
+    age: 40,
+    location: 'Houtson, Texas',
+    previousBackground: 'Hospitality Management',
+    className: 'WEBPT8',
+    favSubjects: ['Flexbox  CSS Styling ',' Javascript functions']
+    })
+
+// console.log(Cheryl);
+// Cheryl.speak();
+// Cheryl.listsSubjects();
+// Cheryl.PRAssignment('User Interface III');
+// Cheryl.sprintChallenge('User Inteface III');
 
 
 // *** PM OBJECTS ***
